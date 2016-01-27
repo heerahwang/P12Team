@@ -24,7 +24,7 @@ public class Login extends JPanel{
 	*/
 	public Login()
 	{
-		back=Toolkit.getDefaultToolkit().getImage("C:\\Users\\sist\\Pictures\\back1.png");
+		back=Toolkit.getDefaultToolkit().getImage("C:\\image\\back.png");
 		//이미지 불러오는것 getDefaultToolkit
 		
 		//버튼들 메모리 할당
