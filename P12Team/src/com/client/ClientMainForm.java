@@ -2,38 +2,38 @@ package com.client;
 import java.awt.*;//Layout
 import javax.swing.*;//window
 
-import java.awt.event.*;//ÀÎÅÍÆäÀÌ½º
+import java.awt.event.*;//ì¸í„°í˜ì´ìŠ¤.
 //
 public class ClientMainForm extends JFrame 
 implements ActionListener
-{ //ActionListener ÇÊ¼ö!!!!!! 
+{ //ActionListener í•„ìˆ˜!!!!!! 
 	
 	CardLayout card = new CardLayout();
-	Login login = new Login(); //login Àº ÆĞ³Î
+	Login login = new Login(); //login ì€ íŒ¨ë„
 	WaitRoom wr=new WaitRoom();
 	
 	public ClientMainForm()
 	{
-		setLayout(card);//JFrameÀÌ ¿ø·¡ °¡Áö°í ÀÖ´ø BorderLayoutÀ» setLayoutÀ» ÅëÇØ º¯°æ
-		add("LOG",login); //login ÆĞ³ÎÀ» À©µµ¿ì Ã¢¿¡ ¿Ã·È´Ù.
+		setLayout(card);//JFrameì´ ì›ë˜ ê°€ì§€ê³  ìˆë˜ BorderLayoutì„ setLayoutì„ í†µí•´ ë³€ê²½
+		add("LOG",login); //login íŒ¨ë„ì„ ìœˆë„ìš° ì°½ì— ì˜¬ë ¸ë‹¤.
 		add("WR",wr);
 		
 
-		//Å©±â
+		//í¬ê¸°
 		setSize(800,600);
-		//À©µµ¿ì¸¦ º¸¿©¶ó
+		//ìœˆë„ìš°ë¥¼ ë³´ì—¬ë¼
 		setVisible(true);
 		setResizable(false);
-		//À©µµ¿ì Å©±â °íÁ¤
+		//ìœˆë„ìš° í¬ê¸° ê³ ì •
 		
-		//<ÀÌº¥Æ® µî·Ï>
+		//<ì´ë²¤íŠ¸ ë“±ë¡>
 		login.b3.addActionListener(this);
 		wr.tf.addActionListener(this);
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// »ı¼ºÀÚ 
+		// ìƒì„±ì 
 		try
 		{
 			 UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");
@@ -47,13 +47,13 @@ implements ActionListener
 		if(e.getSource() == login.b3)
 		{
 			card.show(getContentPane(), "WR");
-			//Ä«µå(ÆĞ³Î)¸¦ º¸¿©´Ş¶ó -> WR À» º¸¿©ÁÖ´Â °Í /Ã¢À» ¹Ù²Ù°í ½ÍÀ»¶§´Â ¾È¿¡ ÀÖ´Â ÆĞ³ÎÀ» ¹Ù²ãÁÜÀ¸·Î½á ÇÑ À©µµ¿ì¿¡¼­ º¯°æ
+			//ì¹´ë“œ(íŒ¨ë„)ë¥¼ ë³´ì—¬ë‹¬ë¼ -> WR ì„ ë³´ì—¬ì£¼ëŠ” ê²ƒ /ì°½ì„ ë°”ê¾¸ê³  ì‹¶ì„ë•ŒëŠ” ì•ˆì— ìˆëŠ” íŒ¨ë„ì„ ë°”ê¿”ì¤Œìœ¼ë¡œì¨ í•œ ìœˆë„ìš°ì—ì„œ ë³€ê²½
 		}
 		else if(e.getSource()==wr.tf)
-		{//Ã¤ÆÃÃ¢ ¸¸µé±â
-			String data = wr.tf.getText(); //³»°¡ ÀÔ·ÂÇÑ °ªÀ» °¡Áö°í ¿Â´Ù.
-			wr.ta.append(data+"\n");//µ¥ÀÌÅÍ¸¦ Ã·ºÎÇØ¶ó \n ‹š¹®¿¡ ¹ØÀ¸·Î ³»·Á°¨ 
-			wr.tf.setText("");//°ªÀ» ¿Ã·ÁÁÖ´Â°Í , °ø¹éÀ» ¿Ã·ÁÁØ°ÍÀÌ±â ¶§¹®¿¡ ´ëÈ­Ã¢ÀÌ ºñ¿öÁö´Â°Í Ã³·³ º¸ÀÓ
+		{//ì±„íŒ…ì°½ ë§Œë“¤ê¸°
+			String data = wr.tf.getText(); //ë‚´ê°€ ì…ë ¥í•œ ê°’ì„ ê°€ì§€ê³  ì˜¨ë‹¤.
+			wr.ta.append(data+"\n");//ë°ì´í„°ë¥¼ ì²¨ë¶€í•´ë¼ \n Â‹Âšë¬¸ì— ë°‘ìœ¼ë¡œ ë‚´ë ¤ê° 
+			wr.tf.setText("");//ê°’ì„ ì˜¬ë ¤ì£¼ëŠ”ê²ƒ , ê³µë°±ì„ ì˜¬ë ¤ì¤€ê²ƒì´ê¸° ë•Œë¬¸ì— ëŒ€í™”ì°½ì´ ë¹„ì›Œì§€ëŠ”ê²ƒ ì²˜ëŸ¼ ë³´ì„
 		}
 		
 	}
