@@ -43,18 +43,16 @@ public class Login extends JPanel{
 		tf.setBounds(315,415,150,30);
 		la2.setBounds(280,450,30,30);
 		pf.setBounds(315,450,150,30);
+		b1.setBounds(315,490,105,30);
+		b2.setBounds(430,490,105,30);
 		b3.setBounds(470,415,65,65);
 		
-		JPanel p=new JPanel(); //FlowLayout 패널로 딱 묶어서 가운데에 뜨게 도와줌
-		p.add(b1);
-		p.add(b2);
-		p.setBounds(307,480,200,40);//위치지정
-		p.setOpaque(false);//투명하게 만든다
+	
 		
 		//추가
 		add(la1);add(tf);add(b3);
 		add(la2);add(pf);
-		add(p);
+		add(b1);add(b2);
 		
 		
 	}
