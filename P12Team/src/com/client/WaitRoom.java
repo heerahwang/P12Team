@@ -17,7 +17,7 @@ JButton b1,b2,b3,b4,b5,b6;
 
 public WaitRoom(){
 	//main-T
-	back=Toolkit.getDefaultToolkit().getImage("C:\\Users\\sist\\Pictures\\back1.png");
+	back=Toolkit.getDefaultToolkit().getImage("C:\\image\\back.png");
 	String[] col1 ={"방이름","공개/비공개","인원"};
 	String[][] row1=new String[0][3];
 	model1=new DefaultTableModel(row1,col1);
