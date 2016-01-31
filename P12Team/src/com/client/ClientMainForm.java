@@ -17,7 +17,7 @@ public class ClientMainForm extends JFrame implements ActionListener, MouseMotio
 		//add("Cursur", mouseMa);
 
 		add("LOG", login);
-		add("MEMBER", memb);
+		add("Member", memb);
 		add("WR", wr);
 		add("TIMER", timer);
 		add("CreateRoom", cr);
