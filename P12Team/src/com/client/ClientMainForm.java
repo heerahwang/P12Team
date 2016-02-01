@@ -12,18 +12,20 @@ public class ClientMainForm extends JFrame implements ActionListener, MouseMotio
 	TimerTest timer = new TimerTest();
 	CreateRoom cr = new CreateRoom();
 	Loading ld=new Loading();
+	GameRule gr=new GameRule();
 	//MouseMain mouseMa = new MouseMain();
 	
 	public ClientMainForm(){
 		setLayout(card);	// BoarderLayout => CardLayout
 		//add("Cursur", mouseMa);
 
-		//add("LOG", login);
-		//add("Member", memb);
-		//add("WR", wr);
-	//	add("TIMER", timer);
-		//add("CreateRoom", cr);
+		add("LOG", login);
+		add("Member", memb);
+		add("WR", wr);
+		add("TIMER", timer);
+		add("CreateRoom", cr);
 		add("Loading", ld);
+		add("GameRule",gr);
 		// 
 		setSize(800, 600);
 		// 
@@ -37,8 +39,10 @@ public class ClientMainForm extends JFrame implements ActionListener, MouseMotio
 		wr.tf.addActionListener(this);
 		wr.b6.addActionListener(this);
 		wr.b1.addActionListener(this);
+		wr.b5.addActionListener(this);
 		cr.b1.addActionListener(this);
 		memb.b2.addActionListener(this);
+		gr.b1.addActionListener(this);
 		//addMouseMotionListener(this);
 		
 	}
@@ -80,9 +84,17 @@ public class ClientMainForm extends JFrame implements ActionListener, MouseMotio
 			Object[] data={cr.scan,cr.box,"full"};
 		    wr.model1.addRow(data);
 		}
+		else if(e.getSource()==wr.b5)
+		{
+			card.show(getContentPane(), "GameRule");
+		}
 		else if(e.getSource() == memb.b2)
 		{
 			card.show(getContentPane(), "LOG");
+		}
+		else if(e.getSource() == gr.b1)
+		{
+			card.show(getContentPane(), "WR");
 		}
 		
 	}
