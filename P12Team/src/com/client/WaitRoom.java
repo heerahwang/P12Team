@@ -23,12 +23,13 @@ public class WaitRoom extends JPanel{
         setCursor(cursor);
 		
 		// Room information
-		back = Toolkit.getDefaultToolkit().getImage("C:\\Users\\shwoo\\git\\P12Team\\P12Team\\lib\\back.png");
+		back = Toolkit.getDefaultToolkit().getImage("C:\\Users\\sist\\git\\P12Team\\P12Team\\lib\\back.png");
 		String[] col1 = {"방이름", "공개/비공개", "인원"};
 		String[] [] row1 = new String[0][3];
 		model1 = new DefaultTableModel(row1, col1);
 		table1 = new JTable(model1);
 		JScrollPane js1 = new JScrollPane(table1);
+		
 		
 		// stand by 
 		String[] col2 = {"ID", "대화명", "위치"};

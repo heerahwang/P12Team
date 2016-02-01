@@ -2,6 +2,7 @@ package com.client;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.*;
+import java.util.Scanner;
 
 public class CreateRoom extends JPanel{
 	Image back;
@@ -12,10 +13,14 @@ public class CreateRoom extends JPanel{
 	JComboBox box;
 	JButton b1, b2, b3, b4, b5, b6, b7;
 	JLabel la1, la2;
+	Scanner scan;
 	
 	public CreateRoom(){
-		back=Toolkit.getDefaultToolkit().getImage("C:\\Users\\shwoo\\git\\P12Team\\P12Team\\lib\\back.png");
-		tf=new JTextField();
+		scan=new Scanner(System.in);
+		back=Toolkit.getDefaultToolkit().getImage("C:\\Users\\sist\\git\\P12Team\\P12Team\\lib\\back.png");
+		tf=new JTextField(); 
+		scan.nextLine();
+		
 		box=new JComboBox();
 		box.addItem("user vs com");
 		box.addItem("user vs user");

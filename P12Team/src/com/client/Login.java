@@ -12,7 +12,7 @@ public class Login  extends JPanel{
 	
 	public Login() {
 		//
-		back = Toolkit.getDefaultToolkit().getImage("C:\\Users\\shwoo\\git\\P12Team\\P12Team\\lib\\back.png");
+		back = Toolkit.getDefaultToolkit().getImage("C:\\Users\\sist\\git\\P12Team\\P12Team\\lib\\back.png");
 		la1 = new JLabel("ID");
 		la2 = new JLabel("PW");
 		tf = new JTextField();
