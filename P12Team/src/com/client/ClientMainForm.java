@@ -11,17 +11,19 @@ public class ClientMainForm extends JFrame implements ActionListener, MouseMotio
 	Member memb = new Member();
 	TimerTest timer = new TimerTest();
 	CreateRoom cr = new CreateRoom();
+	Loading ld=new Loading();
 	//MouseMain mouseMa = new MouseMain();
 	
 	public ClientMainForm(){
 		setLayout(card);	// BoarderLayout => CardLayout
 		//add("Cursur", mouseMa);
 
-		add("LOG", login);
-		add("Member", memb);
-		add("WR", wr);
-		add("TIMER", timer);
-		add("CreateRoom", cr);
+		//add("LOG", login);
+		//add("Member", memb);
+		//add("WR", wr);
+	//	add("TIMER", timer);
+		//add("CreateRoom", cr);
+		add("Loading", ld);
 		// 
 		setSize(800, 600);
 		// 
