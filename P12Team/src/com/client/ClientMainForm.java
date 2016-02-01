@@ -2,6 +2,7 @@ package com.client;
 import java.awt.*; // layout
 import java.awt.event.*;
 import javax.swing.*; // window
+import java.util.Scanner;
 
 public class ClientMainForm extends JFrame implements ActionListener, MouseMotionListener {
 	CardLayout card = new CardLayout();
@@ -74,10 +75,14 @@ public class ClientMainForm extends JFrame implements ActionListener, MouseMotio
 		else if(e.getSource()==cr.b1)
 		{
 			card.show(getContentPane(), "WR");
+			Object[] data={cr.scan,cr.box,"full"};
+		    wr.model1.addRow(data);
 		}
-		else if(e.getSource() == memb.b2){
+		else if(e.getSource() == memb.b2)
+		{
 			card.show(getContentPane(), "LOG");
 		}
+		
 	}
 	
 	@Override

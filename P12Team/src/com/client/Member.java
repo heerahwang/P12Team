@@ -28,7 +28,7 @@ public class Member extends JPanel{
 	public Member()
 	{	
 		
-		back=Toolkit.getDefaultToolkit().getImage("C:\\Users\\shwoo\\git\\P12Team\\P12Team\\lib\\back.png");
+		back=Toolkit.getDefaultToolkit().getImage("C:\\Users\\sist\\git\\P12Team\\P12Team\\lib\\back.png");
 		selecPane = new JPanel();
 		
 		la1=new JLabel("회원가입");
