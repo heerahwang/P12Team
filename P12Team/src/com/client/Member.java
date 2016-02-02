@@ -1,6 +1,8 @@
 package com.client;
 
 import java.awt.Checkbox;
+import java.awt.Font;
+
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -13,6 +15,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
 //import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import java.awt.Font;
 public class Member extends JPanel{
 	
 	Image back;
@@ -32,6 +35,7 @@ public class Member extends JPanel{
 		selecPane = new JPanel();
 		
 		la1=new JLabel("회원가입");
+		la1.setFont(new Font("맑은고딕", Font.BOLD, 30));
 		la2=new JLabel("이름");
 		la3=new JLabel("ID");
 		la4=new JLabel("PW");
@@ -48,7 +52,7 @@ public class Member extends JPanel{
 		rb2 = new JRadioButton("여자", false);
 		
 		setLayout(null);
-		la1.setBounds(370,100,200,50);//
+		la1.setBounds(340,100,200,100);//
 		la2.setBounds(250,170,50,50);//
 		la3.setBounds(250,220,50,50);//id
 		la4.setBounds(250,270,50,50);//pw
