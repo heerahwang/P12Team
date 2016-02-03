@@ -11,8 +11,8 @@ public class ClientMainForm extends JFrame implements ActionListener, MouseMotio
 	Member memb = new Member();
 	TimerTest timer = new TimerTest();
 	CreateRoom cr = new CreateRoom();
-	Loading ld=new Loading();
-	GameRule gr=new GameRule();
+	//Loading ld=new Loading();
+	//GameRule gr=new GameRule();
 	//MouseMain mouseMa = new MouseMain();
 	
 	public ClientMainForm(){
@@ -24,8 +24,8 @@ public class ClientMainForm extends JFrame implements ActionListener, MouseMotio
 		add("WR", wr);
 		add("TIMER", timer);
 		add("CreateRoom", cr);
-		add("Loading", ld);
-		add("GameRule",gr);
+		//add("Loading", ld);
+		//add("GameRule",gr);
 		// 
 		setSize(800, 600);
 		// 
@@ -42,7 +42,7 @@ public class ClientMainForm extends JFrame implements ActionListener, MouseMotio
 		wr.b5.addActionListener(this);
 		cr.b1.addActionListener(this);
 		memb.b2.addActionListener(this);
-		gr.b1.addActionListener(this);
+		//gr.b1.addActionListener(this);
 		//addMouseMotionListener(this);
 		
 	}
@@ -92,10 +92,10 @@ public class ClientMainForm extends JFrame implements ActionListener, MouseMotio
 		{
 			card.show(getContentPane(), "LOG");
 		}
-		else if(e.getSource() == gr.b1)
+/*		else if(e.getSource() == gr.b1)
 		{
 			card.show(getContentPane(), "WR");
-		}
+		}*/
 		
 	}
 	
