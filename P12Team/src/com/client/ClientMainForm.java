@@ -17,7 +17,7 @@ public class ClientMainForm extends JFrame implements ActionListener, MouseMotio
 	
 	public ClientMainForm(){
 		setLayout(card);	// BoarderLayout => CardLayout
-		//add("Cursur", mouseMa);
+		//add("Cursur", mouseMa);   
 
 		add("LOG", login);
 		add("Member", memb);
